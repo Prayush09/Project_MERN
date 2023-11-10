@@ -7,4 +7,5 @@ const Project_Schema=mongoose.Schema({
 },{
     collection:'Project'
 })
+// const myDb=mongoose.connection.useDb('Project');// This can be used to switch between databases
 module.exports=mongoose.model('Project',Project_Schema);

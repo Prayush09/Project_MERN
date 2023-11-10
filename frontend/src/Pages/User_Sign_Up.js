@@ -47,7 +47,7 @@ function User_Sign_Up() {
         } else if (res.status === 200) {
           console.log(arr);
           alert("Email Registered Successfully");
-          navigate("/User-Dashboard");
+          navigate("/sign-in");
         } else {
           return Promise.reject();
         }

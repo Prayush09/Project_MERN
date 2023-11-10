@@ -1,7 +1,6 @@
 import React from "react";
 import Axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { Link, useParams } from "react-router-dom";
 import Nav from "./Nav";
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -28,14 +27,16 @@ function User_Login() {
     }
     Axios.get("http://localhost:4000/api/isValidate/" + email)
       .then((res) => {
+        // Getting data over the server not the best practice.
         if (res.status === 200) {
           if (res.data.length === 0) {
             alert("Email is not registered");
             navigate("/sign-up");
           } else {
             if (res.data[0].password === password) {
+              let {_id}=res.data[0];
               alert("Login successfully");
-              navigate("/User-Dashboard"); //navigation to User-Dashboard
+              navigate("/User-Dashboard/"+_id); //navigation to User-Dashboard
             } else {
               alert("Password is incorrect");
             }
@@ -53,7 +54,7 @@ function User_Login() {
         <MDBCol col="10" md="6">
           <img
             src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
-            class="img-fluid"
+            className="img-fluid"
             alt="Phone image"
           />
         </MDBCol>
@@ -62,7 +63,7 @@ function User_Login() {
           <MDBInput
             wrapperClass="mb-4"
             label="Email address"
-            id="formControlLg"
+            id="formControl_email"
             type="email"
             size="lg"
             onChange={(event) => setEmail(event.target.value)}
@@ -70,7 +71,7 @@ function User_Login() {
           <MDBInput
             wrapperClass="mb-4"
             label="Password"
-            id="formControlLg"
+            id="formControl_pass"
             type="password"
             size="lg"
             onChange={(event) => setPassword(event.target.value)}
