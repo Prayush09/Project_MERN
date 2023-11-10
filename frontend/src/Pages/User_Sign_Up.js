@@ -10,6 +10,7 @@ import {
   MDBInput,
 } from "mdb-react-ui-kit";
 import { useNavigate } from "react-router-dom";
+import Nav from "./Nav";
 
 function User_Sign_Up() {
   const navigate = useNavigate();
@@ -56,6 +57,7 @@ function User_Sign_Up() {
       });
   };
   return (
+    <><Nav/>
     <MDBContainer fluid className="p-4">
       <MDBRow>
         <MDBCol
@@ -124,6 +126,7 @@ function User_Sign_Up() {
         </MDBCol>
       </MDBRow>
     </MDBContainer>
+    </>
   );
 }
 

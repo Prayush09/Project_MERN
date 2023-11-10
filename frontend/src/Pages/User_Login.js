@@ -2,6 +2,7 @@ import React from "react";
 import Axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Link, useParams } from "react-router-dom";
+import Nav from "./Nav";
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import {
@@ -46,6 +47,7 @@ function User_Login() {
       .catch((err) => console.log(err));
   }
   return (
+    <><Nav/>
     <MDBContainer fluid className="p-3 my-5">
       <MDBRow>
         <MDBCol col="10" md="6">
@@ -89,6 +91,7 @@ function User_Login() {
         </MDBCol>
       </MDBRow>
     </MDBContainer>
+    </>
   );
 }
 

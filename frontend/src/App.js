@@ -12,7 +12,6 @@ function App() {
    
     <>
     <HashRouter>
-    <Nav/>
     <Routes>
       <Route path="/" element={<User_Login/>}/>
       <Route path="/sign-up" element={<User_Sign_Up/>}/>

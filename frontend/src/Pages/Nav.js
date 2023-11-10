@@ -2,7 +2,7 @@ import {Link} from 'react-router-dom';
 function Nav(){
     return (
         <>
-        <nav className="navbar">
+        <nav className="navbar bg-dark">
             <Link to="/" className="nav-logo">
                 
             </Link>
