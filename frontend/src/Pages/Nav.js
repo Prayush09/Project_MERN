@@ -11,7 +11,7 @@ function Nav() {
   }
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light custom-navbar">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light custom-navbar sticky-top">
         <a className="navbar-brand">
           <img src={logo} alt="" width="50" height="50"  onClick={home}/>
         </a>
