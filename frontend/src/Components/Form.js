@@ -20,6 +20,10 @@ function Form() {
     const new_arr = [project_name];
     setarr(new_arr);
     console.log(arr);
+    if(project_name===''){
+      alert('Please enter a project name');
+      return;
+    }
     let data = {
       id: id,
       project_name: project_name,
@@ -38,7 +42,8 @@ function Form() {
       .catch((err) => {
         alert(err);
       });
-  };
+      
+  }
   return (
     <>
       <form onSubmit={handleSubmit}>
@@ -48,9 +53,15 @@ function Form() {
             type="text"
             className="form-control"
             id="project_name"
-            onChange={(event) => setproject_name(event.target.value)}
+            placeholder="Enter Project Name"
+            onChange={(event) =>{
+              setproject_name(event.target.value)
+              
+            } }
           />
-          <button type="submit" className="btn btn-info">
+          <button type="submit" className="btn btn-info" onClick={(event)=>{
+            document.getElementById('project_name').value='';
+          }}>
             Submit
           </button>
         </div>
