@@ -1,8 +1,11 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema({
-    Project_Name:'String',
-    
+    id:String,
+    Project_Name:String,
+    Members_Gmail:[{String}]
+
 
 },{
-    collction: 'Project_Description'
+    collection: 'Project_Description'
 })
+module.exports = mongoose.model('Project_Description', Schema)

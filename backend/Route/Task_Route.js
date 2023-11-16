@@ -4,7 +4,7 @@ const Task_Schema=require('../Schema/Task');
 const mongoose=require('mongoose');
 
 Route.post('/create-project/:id',(req,res)=>{// This is used to create a new project
-    // console.log(req.body)
+    
     Task_Schema.find({id:req.params.id},(err,data)=>{
         if(err){
             console.log("Error in getting the data");
@@ -32,7 +32,8 @@ Route.post('/create-project/:id',(req,res)=>{// This is used to create a new pro
              })
            }
         }
-    })
+    }
+    )
 })
 Route.get('/get-project/:id',(req,res)=>{// This is used to get all the projects of a user
     Task_Schema.find({id:req.params.id},(err,data)=>{

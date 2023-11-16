@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Axios from "axios";
 
 const List = (props) => {
+  const navigate = useNavigate();
   let { id } = useParams();
   const [flag, set_flag] = useState(false);
   const deletion = (value) => {
@@ -20,10 +21,36 @@ const List = (props) => {
         alert("An error has occurred");
         console.log(err);
       });
+      Axios.get(`http://localhost:4000/project/delete-project/`+value)
+      .then((res)=>{
+        if(res.status===245){
+          alert("Project Deleted Successfully");
+        }else{
+          return Promise.reject();
+        }
+      }).catch((err)=>{
+        console.log(err);
+      })
     window.location.reload();
   };
   const edit = (value) => {
-    console.log(value);
+    const data={id:id,Project_Name:value,Members_Gmail:[]}
+    console.log(data);
+    // navigate(`/project/${value}`);
+    Axios.post(`http://localhost:4000/project/edit-project/` + id,data)
+    .then((res)=>{
+      if(res.status==200){
+         console.log("Project Created Successfully");
+      }else{
+        return Promise.reject();
+      }
+
+    }).catch((err)=>{
+      console.log(err);
+    })
+    navigate(`/project/${value}`)
+  
+    //Fetch request using Axios
   };
   function list(arr) {
     return arr.map((item) => {
