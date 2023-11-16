@@ -42,6 +42,20 @@ function Form() {
       .catch((err) => {
         alert(err);
       });
+      const data_n={id:id,Project_Name:project_name,Members_Gmail:[]}
+    console.log(data_n);
+    // navigate(`/project/${value}`);
+    Axios.post(`http://localhost:4000/project/add-project/` + id,data_n)
+    .then((res)=>{
+      if(res.status==200){
+         console.log("Project Created Successfully");
+      }else{
+        return Promise.reject();
+      }
+
+    }).catch((err)=>{
+      console.log(err);
+    })
       
   }
   return (

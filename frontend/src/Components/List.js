@@ -34,20 +34,7 @@ const List = (props) => {
     window.location.reload();
   };
   const edit = (value) => {
-    const data={id:id,Project_Name:value,Members_Gmail:[]}
-    console.log(data);
-    // navigate(`/project/${value}`);
-    Axios.post(`http://localhost:4000/project/edit-project/` + id,data)
-    .then((res)=>{
-      if(res.status==200){
-         console.log("Project Created Successfully");
-      }else{
-        return Promise.reject();
-      }
-
-    }).catch((err)=>{
-      console.log(err);
-    })
+    
     navigate(`/project/${value}`)
   
     //Fetch request using Axios

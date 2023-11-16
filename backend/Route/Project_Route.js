@@ -2,7 +2,7 @@ const express=require('express');
 const mongoose=require('mongoose');
 const Project_Schema=require('../Schema/Project_Description');
 const Route=express.Router();
-Route.post('/edit-project/:id',(req,res)=>{
+Route.post('/add-project/:id',(req,res)=>{
     Project_Schema.find({Project_Name:req.body.Project_Name},(err,data)=>{
         if(err){
             console.log(err);
