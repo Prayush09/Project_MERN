@@ -2,6 +2,8 @@ import Axios from 'axios';
 import {useParams} from 'react-router-dom';
 import {useState,useEffect} from 'react';
 import {List} from '../Components/List';
+import './Css/List_Project.css'
+
 function List_Project(){
     let {id}=useParams();
     console.log(id);

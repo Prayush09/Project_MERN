@@ -1,0 +1,115 @@
+
+@font-face {
+    font-family: 'Agbalumo';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/agbalumo/v2/55xvey5uMdT2N37KZfMCgLg.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  
+  body {
+      margin: 0;
+      padding: 0;
+    }
+
+
+/* Container styling */
+.text-center {
+    text-align: center;
+  }
+  
+  /* List styling */
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* Card styling for each project */
+  .card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Button styling */
+  .btn {
+    cursor: pointer;
+    padding: 8px 16px;
+    margin: 8px;
+    font-family: 'Agbalumo', Libre-Baskerville;
+  }
+  
+  .btn-info {
+    background-color: #1bdffd; /* Info color */
+    color: #ffffff;
+  }
+  
+  .btn-danger {
+    background-color: #f70019; /* Danger color */
+    color: #fff;
+  }
+  
+  /* Container styling */
+.text-center {
+    text-align: center;
+  }
+  
+  /* List styling */
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* Card styling for each project */
+  .card-container {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%; /* Adjust the width as needed */
+    margin: auto; /* Center the container */
+  }
+  
+  .card {
+    flex-grow: 1; /* Take remaining space in the container */
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Button styling */
+  .btn-container {
+    display: flex;
+  }
+  
+  .btn {
+    cursor: pointer;
+    padding: 8px 16px;
+    margin: 8px;
+  }
+  
+  .btn-info {
+    background-color: #15c8e4; /* Info color */
+    color: #fff;
+  }
+  
+  
+  .btn-danger {
+    background-color: #e70017; /* Danger color */
+    color: #fff;
+  }
+  

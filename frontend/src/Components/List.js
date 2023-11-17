@@ -1,6 +1,7 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Axios from "axios";
+import './css/List.css'
 
 const List = (props) => {
   let { id } = useParams();
@@ -32,10 +33,9 @@ const List = (props) => {
       return (
         <>
           <div className="d-flex flex-column">
-            <li className="list-group-item px-3 border-0 rounded-3 list-group-item-dark mb-2">
+            <li className="list-group-item px-3 border-0 rounded-5 list-group-item-light mb-1">
               {item}
-            </li>
-            <div className="d-flex gap-4 justify-content-center">
+              <div className="d-flex gap-4 justify-content-center">
               <button
                 className="btn btn-info text-black"
                 onClick={() => {
@@ -52,8 +52,10 @@ const List = (props) => {
               >
                 Delete Project
               </button>
+              </div>
+          
+            </li>
             </div>
-          </div>
         </>
       );
     });

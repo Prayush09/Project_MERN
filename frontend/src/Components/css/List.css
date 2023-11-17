@@ -1,0 +1,61 @@
+
+
+/* Add these styles to your CSS */
+
+/* Container styling */
+.text-center {
+    text-align: center;
+  }
+  
+  /* List styling */
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* Card styling for each project */
+  .card-container {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    width: 80%; /* Adjust the width as needed */
+    margin: auto; /* Center the container */
+  }
+  
+  .card {
+    flex-grow: 1; /* Take remaining space in the container */
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Button styling */
+  .btn-container {
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  .btn {
+    cursor: pointer;
+    padding: 8px 16px;
+    margin: 8px;
+  }
+  
+  .btn-info {
+    background-color: #15c8e4; /* Info color */
+    color: #fff;
+  }
+  
+  .btn-danger {
+    background-color: #e70017; /* Danger color */
+    color: #fff;
+  }
+  
+  /* Add these styles to your CSS */
+
