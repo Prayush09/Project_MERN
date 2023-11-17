@@ -9,7 +9,7 @@ import {
   MDBCardBody,
   MDBInput,
 } from "mdb-react-ui-kit";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Nav from "./Nav";
 
 function User_Sign_Up() {
@@ -121,6 +121,11 @@ function User_Sign_Up() {
               <MDBBtn className="w-100 mb-4" size="md" onClick={handleSubmit}>
                 sign up
               </MDBBtn>
+              <div  className="d-flex justify-content-end">
+                <Link to="/sign-in">
+                <MDBBtn size="sm" outline color="success">Already a member?</MDBBtn>
+                </Link>
+              </div>
             </MDBCardBody>
           </MDBCard>
         </MDBCol>
