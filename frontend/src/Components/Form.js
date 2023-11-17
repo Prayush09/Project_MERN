@@ -27,6 +27,10 @@ function Form() {
     const new_arr = [project_name];
     setarr(new_arr);
     console.log(arr);
+    if(project_name===''){
+      alert('Please enter a project name');
+      return;
+    }
     let data = {
       id: id,
       project_name: project_name,
@@ -45,7 +49,22 @@ function Form() {
       .catch((err) => {
         alert(err);
       });
-  };
+      const data_n={id:id,Project_Name:project_name,Members_Gmail:[]}
+    console.log(data_n);
+    // navigate(`/project/${value}`);
+    Axios.post(`http://localhost:4000/project/add-project/` + id,data_n)
+    .then((res)=>{
+      if(res.status==200){
+         console.log("Project Created Successfully");
+      }else{
+        return Promise.reject();
+      }
+
+    }).catch((err)=>{
+      console.log(err);
+    })
+      
+  }
   return (
     <>
     <Nav/>
@@ -77,24 +96,7 @@ function Form() {
     </div>
     </div>
 
-    {/* {
-      <form onSubmit={handleSubmit}>
-    
-      <div>
-                    <div class="center-container">
-              <div class="input-section">
-                <label class="pname" for="projectName" style={{ fontFamily: "Agbalumo", color: "Black" }}>Project Name </label><br/>
-                <input type="text"  id="project_name" onChange={(event) => setproject_name(event.target.value)} placeholder="Enter project name"/>
-                  <br/>
-                  <br/>
-                  <button class="b1" type="submit" style={{ fontFamily: "Agbalumo", color: "white" }}>Submit</button>
-                  <button  class="b2" type="button" onClick={change_page} style={{ fontFamily: "Agbalumo", color: "white" }}>View Projects</button>
-              </div>
-            </div>
-            </div>
-      </form>
-      
-  } */}
+   
     </>
   );
 }

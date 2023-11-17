@@ -1,9 +1,10 @@
 const express=require('express');
 const Route=express.Router();
 const Task_Schema=require('../Schema/Task');
+const mongoose=require('mongoose');
 
 Route.post('/create-project/:id',(req,res)=>{// This is used to create a new project
-    // console.log(req.body)
+    
     Task_Schema.find({id:req.params.id},(err,data)=>{
         if(err){
             console.log("Error in getting the data");
@@ -31,7 +32,8 @@ Route.post('/create-project/:id',(req,res)=>{// This is used to create a new pro
              })
            }
         }
-    })
+    }
+    )
 })
 Route.get('/get-project/:id',(req,res)=>{// This is used to get all the projects of a user
     Task_Schema.find({id:req.params.id},(err,data)=>{
@@ -39,6 +41,22 @@ Route.get('/get-project/:id',(req,res)=>{// This is used to get all the projects
             console.log("Error in getting the data");
         }else{
             res.status(200).json(data);
+        }
+    })
+})
+
+Route.post('/delete-project/:id',(req,res)=>{
+    Task_Schema.updateOne({id:mongoose.Types.ObjectId(req.params.id)},{$pull:{project_name:req.body.project_name}},(err,data)=>{
+        if(err){
+            console.log(err);
+            console.log("ERROR HAS OCCURED")
+        }else{
+            console.log(data);
+            if(data.modifiedCount===1){// if the project does not exsist error will be thrown
+                res.status(245);
+            }else{
+                res.status(246).json({"message":'Some error has occured'});
+            }
         }
     })
 })
