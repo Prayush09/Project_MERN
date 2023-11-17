@@ -17,86 +17,50 @@ function Nav() {
 
 
   return (
-    <>
-      {
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <div className="container">
-        <Link to="/" className="navbar-brand" onClick={home}>
-          <img src={logo} alt="Logo" width="50" height="50" />
-        </Link>
-
+    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <div className="container-fluid">
+      <Link to="/" className="navbar-brand" onClick={home}>
+          <span id="logo"> <img src={logo} alt="Logo" width="45" height="45" />Task Hub</span>
+         </Link>
         <button
           className="navbar-toggler"
           type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
-
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ml-auto">
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav ml-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <Link to="/User-Dashboard/:id" className="nav-link">
-                Home
+              <span>Home</span>
               </Link>
             </li>
             <li className="nav-item">
               <Link to="/sign-in" className="nav-link">
-                Sign-In
+              <span>Sign-in</span>
               </Link>
             </li>
             <li className="nav-item">
               <Link to="/sign-up" className="nav-link">
-                Sign-Up
+              <span>Sign-up</span>
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="./about-us" className="nav-link">
-                About Us
+              <Link to="/about-us" className="nav-link">
+                <span>About Us</span>
               </Link>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-      
-      /* <nav className="navbar navbar-expand-lg navbar-light bg-light custom-navbar sticky-top">
-        <a className="navbar-brand">
-          <img src={logo} alt="" width="50" height="50"  onClick={home}/>
-        </a>
-
-        <div class="btn-group">
-          <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-             Menu
-          </button>
-            <div class="dropdown-menu dropdown-menu-right">
-                <button class="dropdown-item" type="button">Action</button>
-                <button class="dropdown-item" type="button">Another action</button>
-                <button class="dropdown-item" type="button">Something else here</button>
-            </div>
-        </div>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ml-auto">
-            <li className="nav-item active">
-              <Link to="/home" className="nav-link">Home</Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/sign-up" className="nav-link">Sign-Up</Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/sign-in" className="nav-link">Sign-In</Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/about-us" className="nav-link">About-us</Link>
-            </li>
-          </ul>
-        </div>
-      </nav> */}
-    </>
   );
 }
 

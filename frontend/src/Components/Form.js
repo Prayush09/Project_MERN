@@ -56,7 +56,7 @@ function Form() {
         Welcome User,
       </div>
       <div class="icon-container">
-        <Link to="/" className="navbar-brand" >
+        <Link to="/Project-List/:id" className="navbar-brand" >
           <img  src={add} class="icon" alt="Logo"  width="150px" />
           <label id="1">Add Project</label>
         </Link>

@@ -14,7 +14,7 @@ function App() {
     <>
     <HashRouter>
     <Routes>
-      <Route path="/" element={<User_Login/>}/>
+      <Route path="/" element={<User_Sign_Up/>}/>
       <Route path="/sign-up" element={<User_Sign_Up/>}/>
       <Route path="/sign-in" element={<User_Login/>}/>
       <Route path="/User-Dashboard/:id" element={<Create_Project/>}/>
