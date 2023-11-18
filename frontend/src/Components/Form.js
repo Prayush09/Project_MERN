@@ -1,14 +1,8 @@
 
-import add from './icons/add.png';
-import view from './icons/contacts.png';
-import contact from './icons/contact.png';
-import profile from './icons/prof.png';
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Axios from "axios";
 import { useParams } from "react-router-dom";
-import {Link} from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
-import Nav from '../Pages/Nav'
 import './css/Form.css'
 
 
@@ -65,38 +59,30 @@ function Form() {
     })
       
   }
+ 
   return (
     <>
-    <Nav/>
-    <div class="main-container">
-      <div id="background-image">
-
-      <div class="title">
-        Welcome User,
-      </div>
-      <div class="icon-container">
-        <Link to="/Project-List/:id" className="navbar-brand" >
-          <img  src={add} class="icon" alt="Logo"  width="150px" />
-          <label id="1">Add Project</label>
-        </Link>
-        <Link to="/" className="navbar-brand" >
-          <img  src={view} class="icon" alt="Logo"  width="150px" />
-          <label id="2">View Projects</label>
-        </Link>
-        <Link to="/" className="navbar-brand" >
-          <img  src={profile} class="icon" alt="Logo"  width="150px" />
-          <label id="3">Profile</label>
-        </Link>
-        <Link to="/" className="navbar-brand" >
-          <img  src={contact} class="icon" alt="Logo"  width="150px" />
-          <label id="4">Support</label>   
-        </Link>
-    </div>
-  
-    </div>
-    </div>
-
-   
+      <form onSubmit={handleSubmit}>
+        <div class="form-group">
+          <label>Project Name</label>
+          <input
+            type="text"
+            className="form-control"
+            id="project_name"
+            placeholder="Enter Project Name"
+            onChange={(event) =>{
+              setproject_name(event.target.value)
+              
+            } }
+          />
+          <button type="submit" className="btn btn-info" onClick={(event)=>{
+            document.getElementById('project_name').value='';
+          }}>
+            Submit
+          </button>
+        </div>
+      </form>
+      <button type="button" class="btn btn-dark" onClick={change_page}>View Projects</button>
     </>
   );
 }

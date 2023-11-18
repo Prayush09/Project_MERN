@@ -4,7 +4,6 @@ import './Css/Nav.css'; // Import a custom CSS file
 import { useNavigate } from 'react-router-dom';
 // Import Bootstrap styles
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 // Import Bootstrap JavaScript and dependencies
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
@@ -38,7 +37,7 @@ function Nav() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ml-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link to="/User-Dashboard/:id" className="nav-link">
+              <Link to="/HomePage" className="nav-link">
               <span>Home</span>
               </Link>
             </li>

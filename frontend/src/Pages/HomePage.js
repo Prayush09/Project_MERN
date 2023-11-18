@@ -1,10 +1,10 @@
 import React from 'react';
-import {Home} from '../Components/Form';
-function Create_Project(){
+import {Home} from '../Components/Home';
+function HomePage(){
     return(
         <>
         <Home/>
         </>
     )
 }
-export  {Create_Project};
+export  {HomePage};
