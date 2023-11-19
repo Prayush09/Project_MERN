@@ -18,7 +18,7 @@ function Nav() {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
-      <Link to="/" className="navbar-brand" onClick={home}>
+      <Link to="/HomePage" className="navbar-brand" onClick={home}>
           <span id="logo"> <img src={logo} alt="Logo" width="45" height="45" />Task Hub</span>
          </Link>
         <button
