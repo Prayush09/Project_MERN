@@ -4,6 +4,7 @@ import Axios from "axios";
 import './css/List.css'
 
 const List = (props) => {
+  const navigate=useNavigate();
   let { id } = useParams();
   const [flag, set_flag] = useState(false);
   const deletion = (value) => {
@@ -24,6 +25,7 @@ const List = (props) => {
     window.location.reload();
   };
   const edit = (value) => {
+    navigate(`/project/${value}`);
     console.log(value);
   };
   function list(arr) {
