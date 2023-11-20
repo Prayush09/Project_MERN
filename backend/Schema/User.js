@@ -1,5 +1,6 @@
 const mongoose=require('mongoose');
 const taskSchema=mongoose.Schema({
+    "project_name":String,
     "project_id":String,
     "user_id":String,
     "task_name":String,

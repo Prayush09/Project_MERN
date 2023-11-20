@@ -8,7 +8,7 @@ import Nav from '../Pages/Nav'
 import '../Components/css/Form.css'
 function User_DashBoard(){
     const {id}=useParams();
-    const link=[`/Create-Project/${id}`,`/Project-List/${id}`,`/Profile/${id}`,`/support/${id}`];
+    const link=[`/Create-Project/${id}`,`/Project-List/${id}`,`/Profile/${id}`,`/support/${id}`,`/View-Task/${id}`];
     return(
         <>
     <Nav/>
@@ -34,6 +34,9 @@ function User_DashBoard(){
         <Link to={link[3]} className="navbar-brand" >
           <img  src={contact} class="icon" alt="Logo"  width="150px" />
           <label id="4">Support</label>   
+        </Link>
+        <Link to={link[4]} className="navbar-brand" >
+          <button>Click Me</button>
         </Link>
     </div>
   

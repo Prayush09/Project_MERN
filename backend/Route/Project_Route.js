@@ -89,7 +89,7 @@ Route.post('/add-task',(req,res)=>{
             let project_id=data[0]._id;
             console.log(project_id);
             console.log(data);
-            const add_task={"project_id":project_id,"user_id":req.body.id,"task_name":req.body.task,"task_status":"Not Started"};
+            const add_task={"project_name":data[0].Project_Name,"project_id":project_id,"user_id":req.body.id,"task_name":req.body.task,"task_status":"Not Started"};
             console.log(add_task);
             User.updateOne({email:req.body.email},{$addToSet:{tasks:add_task}},(err,data_use)=>{
                 if(err){
