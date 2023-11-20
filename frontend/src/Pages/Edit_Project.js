@@ -27,6 +27,9 @@ function Edit_Project() {
   const goBack = () => {
     navigate('/Project-List/' + id);
   };
+  function display_Task(){
+    navigate('/Task-Status/'+id+"/"+name);
+}
 
   return (
     <><Nav/>
@@ -38,7 +41,7 @@ function Edit_Project() {
   {isPopupVisible && (
     <PopupAddMember onClose={closePopup} />
   )}
-  <button className="btn btn-info">Task Status</button>
+  <button className="btn btn-info" onClick={display_Task}>Task Status</button>
   <button className="btn btn-info" onClick={allocate}>
     View Members
   </button>
