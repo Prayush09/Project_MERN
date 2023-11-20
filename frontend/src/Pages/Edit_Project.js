@@ -14,8 +14,8 @@ function Edit_Project(){
     const allocate=()=>{
         navigate('/Allocate-Task/'+id+"/"+name);
     }
-    function delete_member(){
-        console.log("hello");
+    function display_Task(){
+        navigate('/Task-Status/'+id+"/"+name);
     }
     
     return(
@@ -28,7 +28,7 @@ function Edit_Project(){
             <button className="btn btn-info" onClick={()=>set_flag(false)}>Close</button>
             </>
         )}
-        <button className="btn btn-info">Task Status</button>
+        <button className="btn btn-info" onClick={display_Task}>Task Status</button>
         <button className="btn btn-info" onClick={allocate}>View Members</button>
         <button className="btn btn-info" onClick={()=>navigate('/Project-List/'+id)}>Go Back</button>
         </>
