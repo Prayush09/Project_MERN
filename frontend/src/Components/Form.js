@@ -80,9 +80,10 @@ function Form() {
           }}>
             Submit
           </button>
+          <button type="button" class="btn btn-dark" onClick={change_page}>View Projects</button>
         </div>
       </form>
-      <button type="button" class="btn btn-dark" onClick={change_page}>View Projects</button>
+     
     </>
   );
 }

@@ -1,0 +1,61 @@
+#main-container {
+    font-family: 'Agbalumo', 'Libre-Baskerville';
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../icons/bg2.jpg');
+    background-size: cover;
+  }
+  
+  .line {
+    border: none;
+    width: 200px;
+    height: 8px;
+    background-color: #2f5499;
+    margin-bottom: 20px;
+  }
+  
+  .transparent-box {
+    width: 500px;
+    max-width: 90%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .transparent-box hr {
+    border: none;
+    border-top: 2px solid #000;
+    margin: 20px 0;
+  }
+  
+  .transparent-box a {
+    color: #2f5499;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .transparent-box button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #2f5499;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .transparent-box button:hover {
+    background-color: #1e3a75;
+  }
+  

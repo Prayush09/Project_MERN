@@ -64,13 +64,13 @@ function User_Sign_Up() {
           md="6"
           className="text-center text-md-start d-flex flex-column justify-content-center"
         >
-          <h1 className="my-5 display-3 fw-bold ls-tight px-3">
-            The best offer <br />
-            <span className="text-primary">for your business</span>
+         <h1 className="my-5 display-3 fw-bold ls-tight px-3">
+          Empower Your Projects<br />
+            <span className="text-primary"> Unleash Your Potential</span>
           </h1>
 
           <p className="px-3" style={{ color: "hsl(217, 10%, 50.8%)" }}>
-            This is a project Management webpage for your awesome projects.
+          Seamless Project Management, From Concept to Completion!
           </p>
         </MDBCol>
 

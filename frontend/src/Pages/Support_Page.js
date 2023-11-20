@@ -1,4 +1,5 @@
 import Support from "../Components/Support"
+
 function Support_Page(){
     return(
         <>

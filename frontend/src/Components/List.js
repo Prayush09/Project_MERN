@@ -1,7 +1,9 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Axios from "axios";
-import './css/List.css'
+import './css/List.css';
+
+
 
 const List = (props) => {
   const navigate=useNavigate();
@@ -43,36 +45,42 @@ const List = (props) => {
       return (
         <>
         {/* Changes Lakshmi */}
-          <div className="d-flex flex-column">
-            <li className="list-group-item px-3 border-0 rounded-5 list-group-item-light mb-1">
-              {item}
-              <div className="d-flex gap-4 justify-content-center">
-              <button
-                className="btn btn-info text-black"
-                onClick={() => {
-                  edit(item);
-                }}
-              >
-                Edit Project
-              </button>
-              <button
-                className="btn btn btn-danger text-black"
-                onClick={() => {
-                  deletion(item);
-                }}
-              >
-                Delete Project
-              </button>
-              </div>
-          
-            </li>
-            </div>
+        <div class="body-tab">
+                <table class="project-table">
+
+                  <tbody>
+                    <tr>
+                      <td>{item}</td>
+                      <td>
+                        <button
+                          className="btn-in"
+                          onClick={() => {
+                            edit(item);
+                          }}
+                        >
+                          Edit Project
+                        </button>
+                        <button
+                          className="btn-dan"
+                          onClick={() => {
+                            deletion(item);
+                          }}
+                        >
+                          Delete Project
+                        </button></td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+
+        </div>
         </>
       );
     });
   }
 
   return <>
+
   {/* changes Lakshmi */}
   {list(props.arr)}
   </>; //Returning this in the ListProject component

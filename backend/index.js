@@ -1,6 +1,6 @@
 const express = require('express');
 const mongoose=require('mongoose');
-mongoose.connect('mongodb://localhost:27017/Project')
+mongoose.connect('mongodb+srv://prayushgiri:f7cSvj7TaenHfAFQ@cluster0.mfjfput.mongodb.net/')
 let db=mongoose.connection;
 db.on('error',()=>console.log("Error in connecting to database"));
 db.on('open',()=>console.log("Connected to database"));
