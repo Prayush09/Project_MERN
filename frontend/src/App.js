@@ -11,6 +11,8 @@ import { ProfilePage } from "./Pages/ProfilePage";
 import { About_Page } from "./Pages/About_Page";
 import { Support_Page } from "./Pages/Support_Page";
 import { List_Members } from "./Pages/List_Members";
+import { View_Task } from "./Pages/View_Task";
+import { Task_Status } from "./Pages/Task_Status";
 
 
 function App() {
@@ -30,6 +32,8 @@ function App() {
           <Route path="/about-us" element={<About_Page/>} />
           <Route path="/support/:id" element={<Support_Page/>} />
           <Route path="/Allocate-Task/:id/:name" element={<List_Members/>} />
+          <Route path="/View-Task/:id" element={<View_Task/>}/>
+          <Route path="/Task-Status/:id/:name" element={<Task_Status/>}/>
         </Routes>
       </HashRouter>
     </>
