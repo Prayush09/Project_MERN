@@ -1,7 +1,8 @@
 const mongoose=require('mongoose');
 const taskSchema=mongoose.Schema({
+    "project_name":String,
     "project_id":String,
-    "user_id":String,
+    "user_email":String,
     "task_name":String,
     "task_status":String
 

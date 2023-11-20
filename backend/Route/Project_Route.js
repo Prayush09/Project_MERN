@@ -87,9 +87,11 @@ Route.post('/add-task',(req,res)=>{
             console.log(err);
         }else{
             let project_id=data[0]._id;
+            let user_name="";
             console.log(project_id);
             console.log(data);
-            const add_task={"project_id":project_id,"user_id":req.body.id,"task_name":req.body.task,"task_status":"Not Started"};
+
+            const add_task={"user_email":req.body.email,"project_name":data[0].Project_Name,"project_id":project_id,"task_name":req.body.task,"task_status":"Not Started"};
             console.log(add_task);
             User.updateOne({email:req.body.email},{$addToSet:{tasks:add_task}},(err,data_use)=>{
                 if(err){
@@ -108,6 +110,25 @@ Route.post('/add-task',(req,res)=>{
                 }
             })
             
+        }
+    })
+
+})
+
+Route.get('/task-status/:id/:name',(req,res)=>{
+    Project_Schema.find({id:req.params.id,Project_Name:req.params.name},(err,data)=>{
+        if(err){
+            console.log(err);
+        }else{
+            let project_id=data[0]._id;
+            Task_Schema.find({project_id:project_id},(err,data)=>{
+                if(err){
+                    console.log(err);
+                }else{
+                    console.log(data);
+                    res.status(200).json(data);
+                }
+            })
         }
     })
 

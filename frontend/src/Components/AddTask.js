@@ -11,8 +11,18 @@ function AddTask(props){
         console.log(props.id);
         console.log(props.name);
         const data={id:props.id,name:props.name,email:gmail,task:task};
-        Axios.post('http://localhost:4000/project/add-task',data);
-        // window.location.reload();
+        Axios.post('http://localhost:4000/project/add-task',data)
+        .then((res)=>{
+            if(res.status===245){
+                alert("Task Added Successfully");
+            }
+            else{
+                return Promise.reject();
+            }
+        })
+        .catch((err)=>{
+            console.log(err);
+        })
 
 
 

@@ -50,4 +50,16 @@ Route.get("/isValidate/:email", (req, res) => {
   });
 });
 
+Route.get("/get-task/:id",(req,res)=>{
+  // This is used to get the tasks of the user
+  Project_Schema.find({_id:req.params.id},(err,data)=>{
+    if(err){
+      console.log("Error in getting Data");
+      return err;
+    }else{
+      res.json(data[0].tasks);
+    }
+  })
+})
+
 module.exports = Route;
