@@ -12,7 +12,7 @@ import '../Components/css/Form.css';
 
 function User_DashBoard() {
   const { id } = useParams();
-  const link = [`/Create-Project/${id}`, `/Project-List/${id}`, `/Profile/${id}`, `/support/${id}`];
+  const link = [`/Create-Project/${id}`, `/Project-List/${id}`, `/Profile/${id}`, `/support/${id}`,`/View-Task/${id}`];
   const [isPopupVisible, setPopupVisible] = useState(false);
 
   const openPopup = () => {
@@ -56,7 +56,7 @@ function User_DashBoard() {
           <div class="icon-container1">
             <Link to={link[4]} className="navbar-brand" >
             <img src={task} class="icon" alt="Logo" width="150px" />
-            <label id="4">View Tasks</label> 
+            <label id="5">View Tasks</label> 
             </Link>
           </div>
         </div>

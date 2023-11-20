@@ -1,0 +1,51 @@
+/* Add this CSS to your stylesheets or in-line style */
+h1 {
+    text-align: center;
+    color: #2f5499;
+    margin-bottom: 20px;
+}
+
+.card {
+    width: 50rem;
+    background-color: #bad2ff;
+    margin: 0 auto; /* Center the card horizontally */
+    border: 1px solid #ddd; /* Add a subtle border */
+    border-radius: 8px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: #333; /* Title color */
+}
+
+.card-text {
+    color: #555; /* Text color */
+}
+
+.dropdown {
+    margin-top: 10px; /* Add space between card-text and dropdown */
+}
+
+.dropdown-toggle {
+    background-color: #2f5499;
+    color: aliceblue;
+    border: none; /* Remove the default button border */
+}
+
+.dropdown-toggle:hover {
+    background-color: #1d3d73; /* Darker background on hover */
+}
+
+.dropdown-item {
+    color: #333;
+}
+
+.dropdown-item:hover {
+    background-color: #1d3d73; /* Darker background on hover */
+    color: aliceblue;
+}
