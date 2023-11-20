@@ -22,10 +22,18 @@ const List = (props) => {
         alert("An error has occurred");
         console.log(err);
       });
+      Axios.get(`http://localhost:4000/project/delete-project/` + id + "/" + value)
+      .then((res)=>{
+        if(res.status===245){
+          // alert("Project Deleted Successfully");
+        }else{
+          return Promise.reject();
+        }
+      }).catch((err)=>{console.log(err)})
     window.location.reload();
   };
   const edit = (value) => {
-    navigate(`/project/${value}`);
+    navigate(`/project/${id}/${value}`);
     console.log(value);
   };
   function list(arr) {
@@ -34,6 +42,7 @@ const List = (props) => {
       // Don't change function names
       return (
         <>
+        {/* Changes Lakshmi */}
           <div className="d-flex flex-column">
             <li className="list-group-item px-3 border-0 rounded-5 list-group-item-light mb-1">
               {item}
@@ -63,6 +72,9 @@ const List = (props) => {
     });
   }
 
-  return <>{list(props.arr)}</>; //Returning this in the ListProject component
+  return <>
+  {/* changes Lakshmi */}
+  {list(props.arr)}
+  </>; //Returning this in the ListProject component
 };
 export { List };

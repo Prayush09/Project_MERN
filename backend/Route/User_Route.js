@@ -1,6 +1,6 @@
 const express = require("express");
 const Route = express.Router();
-const Project_Schema = require("../Schema/User");
+const {Project:Project_Schema} = require("../Schema/User");
 
 Route.post("/create/:email", (req, res) => {
   // This is used to create a new user
