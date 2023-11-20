@@ -29,22 +29,12 @@ function Display_Task(props) {
 
     function list() {
         return data.map((item) => (
-            <div key={item._id}>
-                <h1>{item.project_name}</h1>
-                <h1>{item.task_name}</h1>
-                <h2>{item.task_status}</h2>
-                <h3>{item._id}</h3>
-            </div>
-        ));
-    }
-
-    return (
-        <>
-<h1 style={{ textAlign: 'center' }}>TASK</h1>
-<Card className="mx-auto" style={{ width: '50rem', backgroundColor: '#bad2ff' }}>
+            <>
+            <Card className="mx-auto" style={{ width: '50rem', backgroundColor: '#bad2ff' }}>
     <Card.Body>
-        <Card.Title>Project Name</Card.Title>
-        <Card.Text>Task:</Card.Text>
+        <Card.Title>{item.project_name}</Card.Title>
+        <Card.Text>{item.task_name}</Card.Text>
+        <Card.Text>{item.task_status}</Card.Text>
         <Dropdown>
             <Dropdown.Toggle variant="secondary" id="dropdown-basic">
                 Status
@@ -57,6 +47,15 @@ function Display_Task(props) {
         </Dropdown>
     </Card.Body>
 </Card>
+            </> 
+            
+        ));
+    }
+
+    return (
+        <>
+<h1 style={{ textAlign: 'center' }}>TASK</h1>
+
 
 
             {list()}
